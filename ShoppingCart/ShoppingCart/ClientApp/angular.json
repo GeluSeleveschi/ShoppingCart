@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "ShoppingCart"
+  "defaultProject": "ShoppingCart",
+  "cli": {
+    "analytics": false
+  }
 }

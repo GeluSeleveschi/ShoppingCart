@@ -1,0 +1,14 @@
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\bin\Debug\net7.0\ShoppinCart.DAL.deps.json
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\bin\Debug\net7.0\ShoppinCart.DAL.runtimeconfig.json
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\bin\Debug\net7.0\ShoppinCart.DAL.dll
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\bin\Debug\net7.0\ShoppinCart.DAL.pdb
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.csproj.AssemblyReference.cache
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.AssemblyInfoInputs.cache
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.AssemblyInfo.cs
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.csproj.CoreCompileInputs.cache
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.dll
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\refint\ShoppinCart.DAL.dll
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.pdb
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ShoppinCart.DAL.genruntimeconfig.cache
+E:\SHOPPING CART\ShoppingCart\ShoppingCart\ShoppinCart.DAL\obj\Debug\net7.0\ref\ShoppinCart.DAL.dll

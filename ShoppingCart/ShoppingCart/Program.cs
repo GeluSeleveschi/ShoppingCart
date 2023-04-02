@@ -1,5 +1,4 @@
 using ShoppinCart.DAL;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,0 +1,22 @@
+.mat-card {    
+    text-align: -webkit-center;    
+    max-width: 60%;
+}   
+
+.demo-toolbar {    
+    display: flex;    
+    align-items: center;    
+    width: 100%;    
+}   
+
+mat-card {    
+    width: 600px;    
+    margin: 2em auto;    
+    text-align: center;  
+    background-color: rgba(255, 255, 255, 0.2);
+}    
+    
+mat-toolbar-row {    
+    justify-content: space-between;    
+}    
+   

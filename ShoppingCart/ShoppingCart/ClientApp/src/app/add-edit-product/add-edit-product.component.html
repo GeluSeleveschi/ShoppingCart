@@ -1,1 +1,12 @@
-<p>add-edit-product works!</p>
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="productForm" (ngSubmit)="submit(productForm.value)">
+            <mat-form-field class="demo-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" formControlName="name">
+                <mat-error *ngIf="validateControl('name') 
+                && hasError('name', 'required')">Name is required</mat-error>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+</mat-card>

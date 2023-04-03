@@ -27,4 +27,23 @@ export class AddEditProductComponent implements OnInit {
       imagePath: new FormControl()
     })
   }
+
+  submit(currentProduct: any) {
+
+  }
+
+  validateControl = (controlName: string) => {
+    if (this.productForm.get(controlName)?.invalid && this.productForm.get(controlName)?.touched)
+      return true;
+
+    return false;
+  }
+
+  hasError = (controlName: string, errorName: string) => {
+    if (this.productForm.get(controlName)?.hasError(errorName))
+      return true;
+
+    return false;
+  }
+
 }

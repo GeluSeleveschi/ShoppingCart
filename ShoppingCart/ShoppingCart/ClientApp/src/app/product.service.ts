@@ -9,7 +9,7 @@ export class ProductService {
   URL: string = `${environment.serverUrl}/api/product`;
   constructor(private http: HttpClient) { }
 
-  addProduct(product: any) {
-    return this.http.post(this.URL, product);
+  addProduct(formData: any) {
+    return this.http.post(this.URL, formData);
   }
 }

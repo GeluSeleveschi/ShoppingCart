@@ -1,12 +1,29 @@
 <mat-card>
     <mat-card-content>
-        <form [formGroup]="productForm" (ngSubmit)="submit(productForm.value)">
+        <form [formGroup]="productForm" (ngSubmit)="submit()">
             <mat-form-field class="demo-full-width">
                 <mat-label>Name</mat-label>
-                <input matInput type="text" formControlName="name">
+                <input matInput formControlName="name">
                 <mat-error *ngIf="validateControl('name') 
                 && hasError('name', 'required')">Name is required</mat-error>
             </mat-form-field>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description">
+            </mat-form-field>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price">
+            </mat-form-field>
+            <div class="col-md-12">
+                <input type="file" #photo placeholder="Choose file" (change)="onFileSelected($event)"
+                    style="display: none;">
+                <button type="button" class="btn btn-success" (click)="photo.click()">
+                    <mat-icon (click)="photo.click()">cloud_upload</mat-icon>
+                </button>&nbsp;
+                <span *ngIf="selectedFile">{{selectedFile.name}}</span>
+            </div>
+            <button mat-raised-button color="warn" type="submit">Create Product</button>
         </form>
     </mat-card-content>
 </mat-card>

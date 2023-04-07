@@ -2,6 +2,6 @@ export class Product {
     id?: number;
     name: string;
     description: string;
-    imagePath?: string;
+    imagePath?: any;
     price: number;
 }

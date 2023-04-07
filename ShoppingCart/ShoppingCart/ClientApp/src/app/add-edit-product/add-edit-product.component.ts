@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ProductService } from '../product.service';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-add-edit-product',
@@ -9,6 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class AddEditProductComponent implements OnInit {
   productForm: FormGroup;
+  product: Product;
 
   constructor(private productService: ProductService, private fb: FormBuilder) {
 
@@ -20,7 +22,7 @@ export class AddEditProductComponent implements OnInit {
 
   createProductForm = () => {
     return this.productForm = this.fb.group({
-      id: new FormControl(),
+      id: new FormControl(0),
       name: new FormControl(),
       description: new FormControl(),
       price: new FormControl(),
@@ -28,8 +30,22 @@ export class AddEditProductComponent implements OnInit {
     })
   }
 
-  submit(currentProduct: any) {
+  submit() {
+    const formData = new FormData();
+    formData.append('id', this.productForm.value.id);
+    formData.append('name', this.productForm.value.name);
+    formData.append('description', this.productForm.value.description);
+    formData.append('price', this.productForm.value.price);
+    formData.append('imagePath', this.selectedFile);
 
+    this.productService.addProduct(formData).subscribe(
+      (response) => {
+        console.log('Product created successfully');
+      },
+      (error) => {
+        console.log('Product creation failed');
+      }
+    );
   }
 
   validateControl = (controlName: string) => {
@@ -44,6 +60,20 @@ export class AddEditProductComponent implements OnInit {
       return true;
 
     return false;
+  }
+
+  uploadPhoto(file: any) {
+    debugger;
+    const formData = new FormData();
+
+    formData.append('file', file, file.name);
+    this.product.imagePath = file;
+  }
+
+  selectedFile: File;
+
+  onFileSelected(event: any): void {
+    this.selectedFile = event.target.files[0];
   }
 
 }

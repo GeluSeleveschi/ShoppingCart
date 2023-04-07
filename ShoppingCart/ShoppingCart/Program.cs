@@ -1,4 +1,6 @@
 using ShoppinCart.DAL;
+using ShoppingCart.Service.BLL;
+using ShoppingCart.Service.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IUploadService, UploadService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -20,6 +32,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.UseCors("CorsPolicy");
 
 app.MapControllerRoute(
     name: "default",

@@ -1,22 +1,39 @@
-.mat-card {    
-    text-align: -webkit-center;    
+.mat-card {
+    text-align: -webkit-center;
     max-width: 60%;
-}   
+}
 
-.demo-toolbar {    
-    display: flex;    
-    align-items: center;    
-    width: 100%;    
-}   
+.demo-toolbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 
-mat-card {    
-    width: 600px;    
-    margin: 2em auto;    
-    text-align: center;  
+mat-card {
+    width: 400px;
+    margin: 2em auto;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
-}    
-    
-mat-toolbar-row {    
-    justify-content: space-between;    
-}    
-   
+}
+
+mat-toolbar-row {
+    justify-content: space-between;
+}
+
+.demo-full-width {
+    width: 100%;
+}
+
+input {
+    height: 100%;
+    min-height: 40px;
+}
+
+mat-card-content {
+    border: 3px solid;
+    border-radius: 20px;
+}
+
+.col-md-12 {
+    text-align: start;
+}

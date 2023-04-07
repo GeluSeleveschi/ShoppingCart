@@ -20,7 +20,7 @@ namespace ShoppingCart.Service.BLL
             {
                 Name = model.Name,
                 Description = model.Description,
-                ImagePath = model.ImagePath,
+                ImagePath = model.ImagePath.Name,
                 Price = model.Price
             };
 

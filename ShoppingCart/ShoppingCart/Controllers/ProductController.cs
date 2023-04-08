@@ -31,5 +31,13 @@ namespace ShoppingCart.Controllers
 
             return Ok();
         }
+
+        [HttpGet]
+        public async Task<ActionResult> GetProducts()
+        {
+            var products = await _productService.GetProducts();
+
+            return products != null && products.Any() ? Ok(products) : NoContent();
+        }
     }
 }

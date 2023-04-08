@@ -13,6 +13,8 @@ import { AddEditProductComponent } from './add-edit-product/add-edit-product.com
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ProductListComponent } from './product-list/product-list.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
     CounterComponent,
     FetchDataComponent,
     AddEditProductComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,18 +32,20 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+    CommonModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'product', component: AddEditProductComponent },
+      { path: 'product-list', component: ProductListComponent },
     ]),
-      ToastrModule.forRoot({
+    ToastrModule.forRoot({
       positionClass: 'toast-top-full-width'
     }),
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })

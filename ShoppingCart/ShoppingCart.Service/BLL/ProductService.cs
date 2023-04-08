@@ -1,4 +1,5 @@
-﻿using ShoppinCart.DAL;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoppinCart.DAL;
 using ShoppinCart.DAL.Entities;
 using ShoppinCart.DAL.ViewModels;
 using ShoppingCart.Service.Interfaces;
@@ -29,5 +30,8 @@ namespace ShoppingCart.Service.BLL
 
             await Task.CompletedTask;
         }
+
+        public async Task<List<Product>> GetProducts()
+               => await _appDbContext.Products.ToListAsync();
     }
 }

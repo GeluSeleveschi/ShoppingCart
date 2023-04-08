@@ -12,4 +12,8 @@ export class ProductService {
   addProduct(formData: any) {
     return this.http.post(this.URL, formData);
   }
+
+  getProducts() {
+    return this.http.get(this.URL);
+  }
 }

@@ -24,8 +24,8 @@ namespace ShoppingCart.Service.BLL
                 Price = model.Price
             };
 
-            _appDbContext.Products.Add(product);
-            await _appDbContext.SaveChangesAsync();
+            await _appDbContext.Products.AddAsync(product);
+            _appDbContext.SaveChanges();
 
             await Task.CompletedTask;
         }

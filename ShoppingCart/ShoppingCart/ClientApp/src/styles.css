@@ -18,3 +18,31 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.toast {
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+}
+
+.toast-container {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: auto;
+  text-align: center;
+}
+
+.toast-success {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+}
+
+.toast-error {
+  background-color: rgb(250, 63, 63);
+  color: white;
+  border-radius: 10px;
+}

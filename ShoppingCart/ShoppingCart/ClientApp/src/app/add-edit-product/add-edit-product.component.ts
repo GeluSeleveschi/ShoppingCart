@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
+import { ToastrNotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-add-edit-product',
@@ -12,7 +13,8 @@ export class AddEditProductComponent implements OnInit {
   productForm: FormGroup;
   product: Product;
 
-  constructor(private productService: ProductService, private fb: FormBuilder) {
+  constructor(private productService: ProductService, private fb: FormBuilder,
+    private notificationService: ToastrNotificationService) {
 
   }
 
@@ -41,9 +43,11 @@ export class AddEditProductComponent implements OnInit {
     this.productService.addProduct(formData).subscribe(
       (response) => {
         console.log('Product created successfully');
+        this.notificationService.showSuccess('Product created successfully.', 'Product');
       },
       (error) => {
         console.log('Product creation failed');
+        this.notificationService.showError('Something went wrong.', 'Product');
       }
     );
   }

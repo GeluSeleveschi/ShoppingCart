@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'product', component: AddEditProductComponent },
-    ])
+    ]),
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
